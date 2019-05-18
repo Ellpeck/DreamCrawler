@@ -15,6 +15,9 @@ public class Arrow : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
+        var enemy = other.gameObject.GetComponent<HealthEnemy>();
+        if (enemy != null)
+            enemy.TakeDamage(1);
         Destroy(this.gameObject);
     }
 
