@@ -9,8 +9,9 @@ public class PlayerMovement : MonoBehaviour {
 
     public float moveSpeed;
     public GameObject weapon;
-    public GameObject projectile;
     public Transform projectileSpawn;
+    public GameObject projectile;
+    public float weaponCooldown;
 
     private Camera mainCamera;
     private Animator animator;
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour {
 
     private float horizontal;
     private float vertical;
+    private float cooldown;
 
     private void Start() {
         this.mainCamera = Camera.main;
@@ -34,8 +36,13 @@ public class PlayerMovement : MonoBehaviour {
         var weaponPos = weaponTrans.position;
         weaponTrans.up = -new Vector3(mouse.x - weaponPos.x, mouse.y - weaponPos.y);
 
-        if (Input.GetMouseButtonDown(0)) {
-            Instantiate(this.projectile, this.projectileSpawn.position, this.projectileSpawn.rotation);
+        if (this.cooldown <= 0) {
+            if (Input.GetMouseButton(0)) {
+                Instantiate(this.projectile, this.projectileSpawn.position, this.projectileSpawn.rotation);
+                this.cooldown = this.weaponCooldown;
+            }
+        } else {
+            this.cooldown -= Time.deltaTime;
         }
     }
 

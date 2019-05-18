@@ -6,6 +6,7 @@ using UnityEngine;
 public class Arrow : MonoBehaviour {
 
     public float speed;
+    public float damage;
 
     private Rigidbody2D body;
 
@@ -17,7 +18,7 @@ public class Arrow : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D other) {
         var enemy = other.gameObject.GetComponent<HealthEnemy>();
         if (enemy != null)
-            enemy.TakeDamage(1);
+            enemy.TakeDamage(this.damage);
         Destroy(this.gameObject);
     }
 

@@ -13,7 +13,7 @@ public class HealthEnemy : MonoBehaviour {
         this.health = this.maxHealth;
     }
 
-    public void TakeDamage(int amount) {
+    public void TakeDamage(float amount) {
         this.health = Math.Max(0, this.health - amount);
         if (this.health <= 0)
             Destroy(this.gameObject);
