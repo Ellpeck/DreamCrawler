@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject projectile;
     public float weaponCooldown;
 
-    private Camera mainCamera;
     private Animator animator;
     private Rigidbody2D body;
 
@@ -20,7 +19,6 @@ public class PlayerMovement : MonoBehaviour {
     private float cooldown;
 
     private void Start() {
-        this.mainCamera = Camera.main;
         this.animator = this.GetComponent<Animator>();
         this.body = this.GetComponent<Rigidbody2D>();
     }
@@ -29,7 +27,7 @@ public class PlayerMovement : MonoBehaviour {
         this.horizontal = Input.GetAxisRaw("Horizontal");
         this.vertical = Input.GetAxisRaw("Vertical");
 
-        var mouse = this.mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        var mouse = MainCamera.Instance.Camera.ScreenToWorldPoint(Input.mousePosition);
         var weaponTrans = this.weapon.transform;
         var weaponPos = weaponTrans.position;
         weaponTrans.up = -new Vector3(mouse.x - weaponPos.x, mouse.y - weaponPos.y);
@@ -55,4 +53,5 @@ public class PlayerMovement : MonoBehaviour {
     public void OnDeath() {
         Debug.Log("Ded");
     }
+
 }

@@ -43,6 +43,10 @@ public class HealthEnemy : MonoBehaviour {
             foreach (var obj in this.deathObjects)
                 Instantiate(obj, this.transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
         }
+
+        if (this.health <= 0 || this.CompareTag("Player")) {
+            MainCamera.Instance.Shake();
+        }
     }
 
 }

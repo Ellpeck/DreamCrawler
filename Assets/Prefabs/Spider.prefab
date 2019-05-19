@@ -412,7 +412,6 @@ GameObject:
   - component: {fileID: 5098744490895838241}
   - component: {fileID: 5098744490895838242}
   - component: {fileID: 5098744490895838240}
-  - component: {fileID: 5098744490895838255}
   - component: {fileID: -2424558014706931718}
   m_Layer: 0
   m_Name: Spider
@@ -514,22 +513,6 @@ MonoBehaviour:
   speed: 0.1
   canLose: 0
   damageDealt: 1
---- !u!58 &5098744490895838255
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5098744490895838245}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 15
 --- !u!114 &-2424558014706931718
 MonoBehaviour:
   m_ObjectHideFlags: 0
