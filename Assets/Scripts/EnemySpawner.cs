@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour {
         if (other.CompareTag("Player")) {
             foreach (var pos in this.positions) {
                 var enemy = this.enemiesToSpawn[Random.Range(0, this.enemiesToSpawn.Length)];
-                Instantiate(enemy, pos.position, pos.rotation);
+                Instantiate(enemy, pos.position, pos.rotation, this.transform.parent);
                 Destroy(pos.gameObject);
             }
             Destroy(this.gameObject);

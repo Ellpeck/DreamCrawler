@@ -1,5 +1,8 @@
-﻿using JetBrains.Annotations;
+﻿using System.Collections;
+using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -17,6 +20,7 @@ public class PlayerMovement : MonoBehaviour {
     private float horizontal;
     private float vertical;
     private float cooldown;
+    private bool isDead;
 
     private void Start() {
         this.animator = this.GetComponent<Animator>();
@@ -24,6 +28,8 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void Update() {
+        if (this.isDead)
+            return;
         this.horizontal = Input.GetAxisRaw("Horizontal");
         this.vertical = Input.GetAxisRaw("Vertical");
 
@@ -43,6 +49,11 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void FixedUpdate() {
+        if (this.isDead) {
+            this.animator.SetBool(Walking, false);
+            return;
+        }
+
         var motion = new Vector2(this.horizontal, this.vertical) * this.moveSpeed;
         this.body.MovePosition(this.body.position + motion);
 
@@ -51,7 +62,18 @@ public class PlayerMovement : MonoBehaviour {
 
     [UsedImplicitly]
     public void OnDeath() {
-        Debug.Log("Ded");
+        if (this.isDead)
+            return;
+        this.isDead = true;
+        foreach (var rend in this.GetComponentsInChildren<SpriteRenderer>())
+            rend.enabled = false;
+        this.StartCoroutine(RestartLevel());
+    }
+
+    private static IEnumerator RestartLevel() {
+        Fade.Instance.FadeOut();
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
