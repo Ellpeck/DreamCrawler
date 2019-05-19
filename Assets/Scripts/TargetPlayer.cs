@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TargetPlayer : MonoBehaviour {
 
     private static readonly int Walking = Animator.StringToHash("Walking");
     public float speed;
     public bool canLose;
+    public float damageDealt;
 
     private Transform player;
     private Animator animator;
@@ -26,6 +24,12 @@ public class TargetPlayer : MonoBehaviour {
             this.body.MovePosition(Vector2.MoveTowards(this.body.position, this.player.position, this.speed));
         }
         this.animator.SetBool(Walking, this.isActive);
+    }
+
+    private void OnCollisionStay2D(Collision2D other) {
+        if (this.damageDealt > 0 && other.gameObject.CompareTag("Player")) {
+            other.gameObject.GetComponent<HealthEnemy>().TakeDamage(this.damageDealt);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

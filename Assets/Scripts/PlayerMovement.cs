@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using JetBrains.Annotations;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
@@ -53,4 +51,8 @@ public class PlayerMovement : MonoBehaviour {
         this.animator.SetBool(Walking, motion.x != 0 || motion.y != 0);
     }
 
+    [UsedImplicitly]
+    public void OnDeath() {
+        Debug.Log("Ded");
+    }
 }

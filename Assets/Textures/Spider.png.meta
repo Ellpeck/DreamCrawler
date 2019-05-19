@@ -23,6 +23,12 @@ TextureImporter:
   - first:
       213: -6725166634347724402
     second: Spider_6
+  - first:
+      213: 905633704357905193
+    second: Spider_7
+  - first:
+      213: -7303839196576682541
+    second: Spider_8
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -247,6 +253,48 @@ TextureImporter:
       bones: []
       spriteID: d1a40857645c18445a54041a0dec472b
       internalID: -6725166634347724402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_7
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 363
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637ddfc7be187c64096d304b3bb1ab4a
+      internalID: 905633704357905193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_8
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 48
+        width: 296
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1316946c959e9b4294238a6faca0796
+      internalID: -7303839196576682541
       vertices: []
       indices: 
       edges: []

@@ -429,7 +429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5098744490895838245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.29, y: -0.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5098744491591651057}
@@ -513,6 +513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.1
   canLose: 0
+  damageDealt: 1
 --- !u!58 &5098744490895838255
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -541,8 +542,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5771d067a19f927438c892001da69441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 3
   health: 0
+  damageCooldown: 0
+  deathObjects:
+  - {fileID: 5291190627838189334, guid: 2a1748c60de454f4995de804e2ad0d37, type: 3}
+  - {fileID: 440817804521199873, guid: b7ca6ad857aec424b96ef87ee0d0afb3, type: 3}
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  destroyOnDeath: 1
 --- !u!1 &5098744490961058134
 GameObject:
   m_ObjectHideFlags: 0
