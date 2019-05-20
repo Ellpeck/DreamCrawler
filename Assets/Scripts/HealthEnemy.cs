@@ -49,4 +49,8 @@ public class HealthEnemy : MonoBehaviour {
         }
     }
 
+    public void Heal(float amount) {
+        this.health = Math.Min(this.maxHealth, this.health + amount);
+    }
+
 }

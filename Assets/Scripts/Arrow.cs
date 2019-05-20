@@ -7,6 +7,7 @@ public class Arrow : MonoBehaviour {
 
     public float speed;
     public float damage;
+    public GameObject deathEffect;
 
     private Rigidbody2D body;
 
@@ -19,6 +20,7 @@ public class Arrow : MonoBehaviour {
         var enemy = other.gameObject.GetComponent<HealthEnemy>();
         if (enemy != null)
             enemy.TakeDamage(this.damage);
+        Instantiate(this.deathEffect, this.transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 

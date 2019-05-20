@@ -1,22 +1,13 @@
 fileFormatVersion: 2
-guid: 776d5b3c3a7179f45b1f89ab9c9b3e19
+guid: fe844ca7d788ace49870ead5483fb4ad
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -394591486901757920
-    second: Boy_0
+      213: -7113479977989563460
+    second: Controls_0
   - first:
-      213: 3137079431536429357
-    second: Boy_1
-  - first:
-      213: -3675725876680994150
-    second: Boy_2
-  - first:
-      213: 969731002292518049
-    second: Boy_3
-  - first:
-      213: 7642467643661132877
-    second: Boy_4
+      213: 7908859509845356740
+    second: Controls_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -99,106 +90,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boy_0
+      name: Controls_0
       rect:
         serializedVersion: 2
-        x: 182
-        y: 21
-        width: 204
-        height: 303
-      alignment: 9
-      pivot: {x: 0.6012937, y: 0.022615163}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18031405a65018d40b3d7eb2a9d8f6e9
-      internalID: -394591486901757920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boy_2
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 40
-        width: 31
-        height: 142
-      alignment: 9
-      pivot: {x: 0.7483332, y: 0.95938885}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8998766ebefe114418e4edf2b0559bb3
-      internalID: -3675725876680994150
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boy_3
-      rect:
-        serializedVersion: 2
-        x: 103
-        y: 39
-        width: 52
-        height: 142
-      alignment: 9
-      pivot: {x: 0.11820001, y: 0.9394154}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a04b50483efe5d43bd969ca5b0426f8
-      internalID: 969731002292518049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boy_1
-      rect:
-        serializedVersion: 2
-        x: 458
-        y: 190
-        width: 144
-        height: 141
+        x: 55
+        y: 58
+        width: 428
+        height: 302
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c3a2664b2ab48546b38b42d8280d0ce
-      internalID: 3137079431536429357
+      spriteID: e57cf9e65cf285c4b8a6d1246020f9a5
+      internalID: -7113479977989563460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boy_4
+      name: Controls_1
       rect:
         serializedVersion: 2
-        x: 412
-        y: 42
-        width: 204
-        height: 121
-      alignment: 9
-      pivot: {x: 0.039212245, y: 0.43637735}
+        x: 698
+        y: 74
+        width: 341
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cf1a63ab7ba7324ea7221ed75a79b58
-      internalID: 7642467643661132877
+      spriteID: 5472dfc42a71ae544ae7a003636dd353
+      internalID: 7908859509845356740
       vertices: []
       indices: 
       edges: []
@@ -206,7 +134,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 217e0d6033593554e91f031273eae53c
+    spriteID: 03dcbb8089769d447a54f4496ebdb227
     internalID: 0
     vertices: []
     indices: 

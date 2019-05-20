@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5930224106632469239}
   - component: {fileID: 6201996259017241211}
   - component: {fileID: 4207705831883804681}
+  - component: {fileID: 283079155}
   m_Layer: 8
   m_Name: Arrow
   m_TagString: Untagged
@@ -122,14 +123,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.13, y: 0.64}
+    oldSize: {x: 1.44, y: 1.41}
     newSize: {x: 1.13, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0332158, y: 0.31763777}
+  m_Size: {x: 1.3911213, y: 0.9285197}
   m_EdgeRadius: 0
 --- !u!114 &6201996259017241211
 MonoBehaviour:
@@ -145,6 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   damage: 1
+  deathEffect: {fileID: 4294650380361890223, guid: ce8284fe37e67e346870828af655d2f4,
+    type: 3}
 --- !u!96 &4207705831883804681
 TrailRenderer:
   serializedVersion: 2
@@ -183,10 +186,10 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 9
-  m_Time: 0.25
+  m_Time: 0.5
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 5
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -258,3 +261,22 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!95 &283079155
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5930224106632469238}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0b3c34f06e3176f41ab31e3bdf8319a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

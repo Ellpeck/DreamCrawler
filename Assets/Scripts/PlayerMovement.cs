@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour {
     private float vertical;
     private float cooldown;
     private bool isDead;
+    private bool weaponFacingLeft;
 
     private void Start() {
         this.animator = this.GetComponent<Animator>();
@@ -37,6 +38,8 @@ public class PlayerMovement : MonoBehaviour {
         var weaponTrans = this.weapon.transform;
         var weaponPos = weaponTrans.position;
         weaponTrans.up = -new Vector3(mouse.x - weaponPos.x, mouse.y - weaponPos.y);
+        if (weaponTrans.up.x > 0)
+            weaponTrans.Rotate(0, 180, 0);
 
         if (this.cooldown <= 0) {
             if (Input.GetMouseButton(0)) {
