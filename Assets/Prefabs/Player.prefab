@@ -442,9 +442,8 @@ MonoBehaviour:
   moveSpeed: 0.2
   weapon: {fileID: 3281965635680428509}
   projectileSpawn: {fileID: 3281965635537804921}
-  projectile: {fileID: 5930224106632469238, guid: 37fef2ceface9ed4e896d34d450c4ad2,
-    type: 3}
-  weaponCooldown: 0.5
+  defaultWeaponType: {fileID: 11400000, guid: 095be31502a74f24089661929a2e20b3, type: 2}
+  currWeaponType: {fileID: 0}
 --- !u!50 &3281965635460095452
 Rigidbody2D:
   serializedVersion: 4

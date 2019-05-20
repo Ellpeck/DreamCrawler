@@ -11,8 +11,8 @@ public class PlayerMovement : MonoBehaviour {
     public float moveSpeed;
     public GameObject weapon;
     public Transform projectileSpawn;
-    public GameObject projectile;
-    public float weaponCooldown;
+    public WeaponType defaultWeaponType;
+    public WeaponType currWeaponType;
 
     private Animator animator;
     private Rigidbody2D body;
@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour {
     private void Start() {
         this.animator = this.GetComponent<Animator>();
         this.body = this.GetComponent<Rigidbody2D>();
+        this.currWeaponType = Instantiate(this.defaultWeaponType);
     }
 
     private void Update() {
@@ -43,8 +44,13 @@ public class PlayerMovement : MonoBehaviour {
 
         if (this.cooldown <= 0) {
             if (Input.GetMouseButton(0)) {
-                Instantiate(this.projectile, this.projectileSpawn.position, this.projectileSpawn.rotation);
-                this.cooldown = this.weaponCooldown;
+                Instantiate(this.currWeaponType.projectile, this.projectileSpawn.position, this.projectileSpawn.rotation);
+                this.cooldown = this.currWeaponType.cooldown;
+
+                this.currWeaponType.uses--;
+                if (this.currWeaponType.uses <= 0) {
+                    this.currWeaponType = Instantiate(this.defaultWeaponType);
+                }
             }
         } else {
             this.cooldown -= Time.deltaTime;

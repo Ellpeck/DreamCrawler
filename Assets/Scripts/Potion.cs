@@ -9,10 +9,11 @@ public class Potion : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")) {
-            var health = other.GetComponent<HealthEnemy>();
-            if (health != null)
-                health.Heal(this.healAmount);
-            Destroy(this.gameObject);
+            var enemy = other.GetComponent<HealthEnemy>();
+            if (enemy != null && enemy.health < enemy.maxHealth) {
+                enemy.Heal(this.healAmount);
+                Destroy(this.gameObject);
+            }
         }
     }
 
