@@ -27,6 +27,10 @@ public class PlayerMovement : MonoBehaviour {
         this.animator = this.GetComponent<Animator>();
         this.body = this.GetComponent<Rigidbody2D>();
         this.currWeaponType = Instantiate(this.defaultWeaponType);
+
+        var checkpoint = CheckpointManager.Instance.currentCheckpoint;
+        if (checkpoint != Vector2.zero)
+            this.transform.position = checkpoint;
     }
 
     private void Update() {
