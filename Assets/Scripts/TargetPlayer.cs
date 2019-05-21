@@ -2,6 +2,8 @@
 
 public class TargetPlayer : MonoBehaviour {
 
+    private static readonly int Walking = Animator.StringToHash("Walking");
+
     public float speed;
     public float damageDealt;
 
@@ -11,6 +13,7 @@ public class TargetPlayer : MonoBehaviour {
     private void Start() {
         this.player = GameObject.FindGameObjectWithTag("Player").transform;
         this.body = this.GetComponent<Rigidbody2D>();
+        this.GetComponent<Animator>().SetBool(Walking, true);
     }
 
     private void FixedUpdate() {
