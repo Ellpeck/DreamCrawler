@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4389308058518867119}
   - component: {fileID: 5060357195692295310}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5098744490319914190}
   - component: {fileID: 5098744490319914189}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spider_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5098744490478523536}
   - component: {fileID: 5098744490478523551}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spider_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5098744490598706641}
   - component: {fileID: 5098744490598706640}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spider_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5098744490871722720}
   - component: {fileID: 5098744490871722735}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spider_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 5098744490895838242}
   - component: {fileID: 5098744490895838240}
   - component: {fileID: -2424558014706931718}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +511,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  canLose: 0
   damageDealt: 1
 --- !u!114 &-2424558014706931718
 MonoBehaviour:
@@ -547,7 +546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5098744490961058133}
   - component: {fileID: 5098744490961058132}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spider_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,7 +626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5098744490997628143}
   - component: {fileID: 5098744490997628142}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spider_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -707,7 +706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5098744491591651057}
   - component: {fileID: 5098744491591651056}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
