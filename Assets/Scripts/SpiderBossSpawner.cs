@@ -7,6 +7,7 @@ public class SpiderBossSpawner : MonoBehaviour {
     public GameObject spiderBoss;
     public float newZoom;
     public float speed;
+    public GameObject[] walls;
 
     private bool hasEntered;
 
@@ -14,6 +15,8 @@ public class SpiderBossSpawner : MonoBehaviour {
         if (!this.hasEntered && other.CompareTag("Player")) {
             this.hasEntered = true;
             this.spiderBoss.SetActive(true);
+            foreach (var wall in this.walls)
+                wall.SetActive(true);
         }
     }
 

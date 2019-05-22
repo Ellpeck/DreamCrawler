@@ -47,4 +47,9 @@ public class TargetShootPlayer : MonoBehaviour {
         Instantiate(this.projectile, this.projectileSpawn.position, this.projectileSpawn.rotation);
     }
 
+    [UsedImplicitly]
+    public void Enable() {
+        this.enabled = true;
+    }
+
 }

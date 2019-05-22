@@ -2,6 +2,7 @@
 using System.Collections;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class SpiderBoss : MonoBehaviour {
@@ -19,6 +20,8 @@ public class SpiderBoss : MonoBehaviour {
     public Transform[] spawnPositions;
     public float spawnDelay;
     public float spawnDelayDecrease;
+    public float damageOnContact;
+    public Slider healthBar;
 
     private Transform player;
     private Rigidbody2D body;
@@ -59,11 +62,13 @@ public class SpiderBoss : MonoBehaviour {
                 if (this.phaseTwo)
                     this.spawnDelay -= this.spawnDelayDecrease;
             }
-            this.lastHealth = this.health.health;
 
             if (!this.phaseTwo && this.health.health <= this.phaseTwoHealth)
                 this.phaseTwo = true;
+
+            this.lastHealth = this.health.health;
         }
+        this.healthBar.value = this.health.health / this.health.maxHealth;
 
         if (!this.hasSpawned)
             return;
@@ -91,10 +96,20 @@ public class SpiderBoss : MonoBehaviour {
         }
     }
 
+    private void OnCollisionStay2D(Collision2D other) {
+        if (this.damageOnContact > 0 && other.gameObject.CompareTag("Player")) {
+            other.gameObject.GetComponent<HealthEnemy>().TakeDamage(this.damageOnContact);
+        }
+    }
+
     [UsedImplicitly]
     public void OnSpawn() {
         this.hasSpawned = true;
         this.lastHealth = this.health.health;
+        this.healthBar.transform.parent.gameObject.SetActive(true);
+    }
+
+    public void OnDeath() {
     }
 
 }

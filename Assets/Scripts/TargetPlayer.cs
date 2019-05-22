@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using JetBrains.Annotations;
+using UnityEngine;
 
 public class TargetPlayer : MonoBehaviour {
 
@@ -24,6 +25,11 @@ public class TargetPlayer : MonoBehaviour {
         if (this.damageDealt > 0 && other.gameObject.CompareTag("Player")) {
             other.gameObject.GetComponent<HealthEnemy>().TakeDamage(this.damageDealt);
         }
+    }
+
+    [UsedImplicitly]
+    public void Enable() {
+        this.enabled = true;
     }
 
 }
