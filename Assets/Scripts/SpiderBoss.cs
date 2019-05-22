@@ -110,6 +110,7 @@ public class SpiderBoss : MonoBehaviour {
     }
 
     public void OnDeath() {
+        this.healthBar.transform.parent.gameObject.SetActive(false);
     }
 
 }
