@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: acd89ce1d6cab244ab91c5bdd8398928
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3258773535200342295
+    second: SpiderBoss_0
+  - first:
+      213: -8890638673264761723
+    second: SpiderBoss_1
+  - first:
+      213: 6812579607605553053
+    second: SpiderBoss_2
+  - first:
+      213: 5962820721308490815
+    second: SpiderBoss_3
+  - first:
+      213: -3128033540949161096
+    second: SpiderBoss_4
+  - first:
+      213: 4194536351931596626
+    second: SpiderBoss_5
+  - first:
+      213: 740484731011884601
+    second: SpiderBoss_6
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 75
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpiderBoss_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1551
+        width: 517
+        height: 401
+      alignment: 9
+      pivot: {x: 0.92587876, y: 0.76038635}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcdc153a60a187743afd3ecc627901e8
+      internalID: -3258773535200342295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderBoss_1
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 1541
+        width: 482
+        height: 412
+      alignment: 9
+      pivot: {x: 0.057324167, y: 0.78649104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9bcf45d53bacd498de288cef9855f2
+      internalID: -8890638673264761723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderBoss_2
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 1107
+        width: 694
+        height: 856
+      alignment: 9
+      pivot: {x: 0.54579043, y: 0.4708309}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2911645c187bbdb4ba7ebf5655d5f14b
+      internalID: 6812579607605553053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderBoss_3
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 999
+        width: 362
+        height: 383
+      alignment: 9
+      pivot: {x: 0.95774007, y: 0.84966964}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0e45ccbcba7af4dad191559b1f2572
+      internalID: 5962820721308490815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderBoss_4
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 965
+        width: 366
+        height: 348
+      alignment: 9
+      pivot: {x: 0.08447349, y: 0.85874677}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 512a439993d4a5c49bca494bc88fd9c8
+      internalID: -3128033540949161096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderBoss_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 439
+        width: 274
+        height: 406
+      alignment: 9
+      pivot: {x: 0.88107646, y: 0.85781515}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c3e888b90f9f746893f25703a94e92
+      internalID: 4194536351931596626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderBoss_6
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 403
+        width: 207
+        height: 370
+      alignment: 9
+      pivot: {x: 0.17102994, y: 0.8496857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0880119ed8787ae449fbdc7e0cd6d9c9
+      internalID: 740484731011884601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: cd0154635af7e3d419c0cc6abd2259ae
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
