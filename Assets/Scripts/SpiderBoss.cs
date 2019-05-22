@@ -35,7 +35,6 @@ public class SpiderBoss : MonoBehaviour {
         this.body = this.GetComponent<Rigidbody2D>();
         this.animator = this.GetComponent<Animator>();
         this.health = this.GetComponent<HealthEnemy>();
-        this.lastHealth = this.health.health;
     }
 
     private void FixedUpdate() {
@@ -53,6 +52,19 @@ public class SpiderBoss : MonoBehaviour {
     }
 
     private void Update() {
+        if (this.lastHealth != this.health.health) {
+            for (var i = 0; i < this.lastHealth - this.health.health; i++) {
+                this.spitDelay -= this.spitDelayDecrease;
+                this.spitInbetweenAngle -= this.spitAngleDecrease;
+                if (this.phaseTwo)
+                    this.spawnDelay -= this.spawnDelayDecrease;
+            }
+            this.lastHealth = this.health.health;
+
+            if (!this.phaseTwo && this.health.health <= this.phaseTwoHealth)
+                this.phaseTwo = true;
+        }
+
         if (!this.hasSpawned)
             return;
 
@@ -64,19 +76,6 @@ public class SpiderBoss : MonoBehaviour {
             }
         } else {
             this.spitTimer -= Time.deltaTime;
-        }
-
-        if (this.lastHealth != this.health.health) {
-            this.spitDelay -= this.spitDelayDecrease;
-            this.spitInbetweenAngle -= this.spitAngleDecrease;
-            this.lastHealth = this.health.health;
-
-            if (!this.phaseTwo) {
-                if (this.health.health <= this.phaseTwoHealth)
-                    this.phaseTwo = true;
-            } else {
-                this.spawnDelay -= this.spawnDelayDecrease;
-            }
         }
 
         if (this.phaseTwo) {
@@ -95,6 +94,7 @@ public class SpiderBoss : MonoBehaviour {
     [UsedImplicitly]
     public void OnSpawn() {
         this.hasSpawned = true;
+        this.lastHealth = this.health.health;
     }
 
 }

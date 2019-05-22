@@ -27086,7 +27086,7 @@ MonoBehaviour:
   spitDelay: 3
   spitInbetweenAngle: 35
   spitDelayDecrease: 0.01
-  spitAngleDecrease: 0.1
+  spitAngleDecrease: 0.25
   phaseTwoHealth: 75
   spawnedEnemies:
   - {fileID: 5098744490895838245, guid: 6ef78aecbd93cad4ab8c335f0208fd79, type: 3}
@@ -27100,8 +27100,8 @@ MonoBehaviour:
   - {fileID: 1609206919}
   - {fileID: 575076042}
   - {fileID: 173649971}
-  spawnDelay: 5
-  spawnDelayDecrease: 0.02
+  spawnDelay: 6
+  spawnDelayDecrease: 0.015
 --- !u!114 &8293949416987485549
 MonoBehaviour:
   m_ObjectHideFlags: 0
