@@ -20615,6 +20615,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1854964889}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1857162954 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1857162954, guid: 3042aa11ab8606449bf35c5556269275,
+    type: 3}
+  m_PrefabInstance: {fileID: 357348346}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1861442597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27290,6 +27302,7 @@ MonoBehaviour:
   spawnDelay: 6
   spawnDelayDecrease: 0.015
   damageOnContact: 2
+  healthBar: {fileID: 1857162954}
 --- !u!114 &8293949416987485549
 MonoBehaviour:
   m_ObjectHideFlags: 0
