@@ -2,6 +2,7 @@
 using System.Collections;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -23,6 +24,7 @@ public class SpiderBoss : MonoBehaviour {
     public float spawnDelayDecrease;
     public float damageOnContact;
     public Slider healthBar;
+    public string endScene;
 
     private Transform player;
     private Rigidbody2D body;
@@ -32,7 +34,7 @@ public class SpiderBoss : MonoBehaviour {
     private float spawnTimer;
     private float lastHealth;
     private bool phaseTwo;
-    private bool hasSpawned;
+    private bool isActive;
 
     private void Start() {
         this.player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -42,7 +44,7 @@ public class SpiderBoss : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        if (!this.hasSpawned)
+        if (!this.isActive)
             return;
 
         var pos = this.body.position;
@@ -71,7 +73,7 @@ public class SpiderBoss : MonoBehaviour {
         }
         this.healthBar.value = this.health.health / this.health.maxHealth;
 
-        if (!this.hasSpawned)
+        if (!this.isActive)
             return;
 
         if (this.spitTimer <= 0) {
@@ -102,7 +104,7 @@ public class SpiderBoss : MonoBehaviour {
 
     [UsedImplicitly]
     public void OnSpawn() {
-        this.hasSpawned = true;
+        this.isActive = true;
         this.lastHealth = this.health.health;
         this.healthBar.transform.parent.gameObject.SetActive(true);
     }
@@ -116,6 +118,17 @@ public class SpiderBoss : MonoBehaviour {
 
     public void OnDeath() {
         this.healthBar.transform.parent.gameObject.SetActive(false);
+        foreach (var rend in this.GetComponentsInChildren<SpriteRenderer>())
+            rend.enabled = false;
+        this.isActive = false;
+        this.StartCoroutine(this.DeathSequence());
+    }
+
+    private IEnumerator DeathSequence() {
+        yield return new WaitForSeconds(5);
+        Fade.Instance.FadeOut();
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(this.endScene);
     }
 
 }

@@ -5,16 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MenuHandler : MonoBehaviour {
 
-    public string playScene;
-
-    public void OnPlayButton() {
-        this.StartCoroutine(this.LoadScene());
+    public void LoadSceneOnPress(string scene) {
+        this.StartCoroutine(LoadScene(scene));
     }
 
-    private IEnumerator LoadScene() {
+    private static IEnumerator LoadScene(string scene) {
         Fade.Instance.FadeOut();
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(this.playScene);
+        SceneManager.LoadScene(scene);
     }
 
 }

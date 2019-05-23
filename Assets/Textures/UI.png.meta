@@ -20,6 +20,9 @@ TextureImporter:
   - first:
       213: 8160775752198118580
     second: UI_5
+  - first:
+      213: 7448113381798972013
+    second: UI_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -215,7 +218,7 @@ TextureImporter:
         width: 454
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,6 +226,27 @@ TextureImporter:
       bones: []
       spriteID: f414590594c00324880ebc147150401e
       internalID: 8160775752198118580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_6
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 43
+        width: 392
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0aae3525053624db7f3df065a8caf2
+      internalID: 7448113381798972013
       vertices: []
       indices: 
       edges: []
