@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 public class SpiderBoss : MonoBehaviour {
 
     private static readonly int Walking = Animator.StringToHash("Walking");
+    private static readonly int Shooting = Animator.StringToHash("Shooting");
 
     public float speed;
     public GameObject spit;
@@ -75,10 +76,7 @@ public class SpiderBoss : MonoBehaviour {
 
         if (this.spitTimer <= 0) {
             this.spitTimer = this.spitDelay;
-
-            for (float i = 180; i <= 360; i += Random.Range(this.spitInbetweenAngle / 2, this.spitInbetweenAngle)) {
-                Instantiate(this.spit, this.transform.position, Quaternion.Euler(0, 0, i));
-            }
+            this.animator.SetTrigger(Shooting);
         } else {
             this.spitTimer -= Time.deltaTime;
         }
@@ -107,6 +105,13 @@ public class SpiderBoss : MonoBehaviour {
         this.hasSpawned = true;
         this.lastHealth = this.health.health;
         this.healthBar.transform.parent.gameObject.SetActive(true);
+    }
+
+    [UsedImplicitly]
+    public void Shoot() {
+        for (float i = 180; i <= 360; i += Random.Range(this.spitInbetweenAngle / 2, this.spitInbetweenAngle)) {
+            Instantiate(this.spit, this.transform.position, Quaternion.Euler(0, 0, i));
+        }
     }
 
     public void OnDeath() {
