@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour {
     public Transform projectileSpawn;
     public WeaponType defaultWeaponType;
     public WeaponType currWeaponType;
+    public AudioClip shootSound;
 
     private Animator animator;
     private Rigidbody2D body;
@@ -55,6 +56,8 @@ public class PlayerMovement : MonoBehaviour {
                 if (this.currWeaponType.uses <= 0) {
                     this.currWeaponType = Instantiate(this.defaultWeaponType);
                 }
+                
+                AudioSource.PlayClipAtPoint(this.shootSound, this.transform.position);
             }
         } else {
             this.cooldown -= Time.deltaTime;

@@ -11,6 +11,7 @@ public class TargetShootPlayer : MonoBehaviour {
     public Transform projectileSpawn;
     public GameObject projectile;
     public float cooldownTime;
+    public AudioClip shootSound;
 
     private Transform player;
     private Rigidbody2D body;
@@ -45,6 +46,7 @@ public class TargetShootPlayer : MonoBehaviour {
     [UsedImplicitly]
     public void Shoot() {
         Instantiate(this.projectile, this.projectileSpawn.position, this.projectileSpawn.rotation);
+        AudioSource.PlayClipAtPoint(this.shootSound, this.transform.position);
     }
 
     [UsedImplicitly]

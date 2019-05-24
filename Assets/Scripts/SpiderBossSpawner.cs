@@ -8,6 +8,7 @@ public class SpiderBossSpawner : MonoBehaviour {
     public float newZoom;
     public float speed;
     public GameObject[] walls;
+    public AudioClip spawnSound;
 
     private bool hasEntered;
 
@@ -17,6 +18,8 @@ public class SpiderBossSpawner : MonoBehaviour {
             this.spiderBoss.SetActive(true);
             foreach (var wall in this.walls)
                 wall.SetActive(true);
+
+            AudioSource.PlayClipAtPoint(this.spawnSound, this.spiderBoss.transform.position);
         }
     }
 

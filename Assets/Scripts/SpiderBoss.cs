@@ -25,6 +25,7 @@ public class SpiderBoss : MonoBehaviour {
     public float damageOnContact;
     public Slider healthBar;
     public string endScene;
+    public AudioClip shootSound;
 
     private Transform player;
     private Rigidbody2D body;
@@ -114,6 +115,7 @@ public class SpiderBoss : MonoBehaviour {
         for (float i = 180; i <= 360; i += Random.Range(this.spitInbetweenAngle / 2, this.spitInbetweenAngle)) {
             Instantiate(this.spit, this.transform.position, Quaternion.Euler(0, 0, i));
         }
+        AudioSource.PlayClipAtPoint(this.shootSound, this.transform.position);
     }
 
     public void OnDeath() {

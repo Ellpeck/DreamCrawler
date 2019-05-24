@@ -518,6 +518,7 @@ MonoBehaviour:
   projectile: {fileID: 8578237351916861275, guid: bae7e5b407e1a474695b934079e40d77,
     type: 3}
   cooldownTime: 1
+  shootSound: {fileID: 8300000, guid: bcc22ff4dff98a449a6664012b22b78d, type: 3}
 --- !u!114 &3286181440922624565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,6 +543,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   destroyOnDeath: 1
+  hurtSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 0ffc7c47e58de2347b04d61a587abd9b, type: 3}
 --- !u!1 &3819757071139290265
 GameObject:
   m_ObjectHideFlags: 0

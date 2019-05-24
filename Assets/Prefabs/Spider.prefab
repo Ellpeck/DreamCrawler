@@ -536,6 +536,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   destroyOnDeath: 1
+  hurtSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 0ffc7c47e58de2347b04d61a587abd9b, type: 3}
 --- !u!1 &5098744490961058134
 GameObject:
   m_ObjectHideFlags: 0

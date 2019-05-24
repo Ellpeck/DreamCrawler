@@ -444,6 +444,7 @@ MonoBehaviour:
   projectileSpawn: {fileID: 3281965635537804921}
   defaultWeaponType: {fileID: 11400000, guid: 095be31502a74f24089661929a2e20b3, type: 2}
   currWeaponType: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: 9df79064bac130542bde2c64976cd195, type: 3}
 --- !u!50 &3281965635460095452
 Rigidbody2D:
   serializedVersion: 4
@@ -553,6 +554,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   destroyOnDeath: 0
+  hurtSound: {fileID: 8300000, guid: 9848b950084ad8e48b2e78b0a1210d99, type: 3}
+  deathSound: {fileID: 0}
 --- !u!1 &3281965635523135497
 GameObject:
   m_ObjectHideFlags: 0

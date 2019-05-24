@@ -22453,6 +22453,7 @@ MonoBehaviour:
   walls:
   - {fileID: 239522427}
   - {fileID: 1142169249}
+  spawnSound: {fileID: 8300000, guid: 3138e4c53606322439629933a831c238, type: 3}
 --- !u!1001 &1877732395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29098,6 +29099,7 @@ MonoBehaviour:
   damageOnContact: 2
   healthBar: {fileID: 1857162954}
   endScene: EndMenu
+  shootSound: {fileID: 8300000, guid: bcc22ff4dff98a449a6664012b22b78d, type: 3}
 --- !u!114 &8293949416987485549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29133,6 +29135,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   destroyOnDeath: 0
+  hurtSound: {fileID: 8300000, guid: 0ffc7c47e58de2347b04d61a587abd9b, type: 3}
+  deathSound: {fileID: 8300000, guid: 3138e4c53606322439629933a831c238, type: 3}
 --- !u!1 &8293949417326128435
 GameObject:
   m_ObjectHideFlags: 0

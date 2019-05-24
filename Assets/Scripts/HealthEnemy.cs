@@ -13,6 +13,8 @@ public class HealthEnemy : MonoBehaviour {
     public GameObject[] deathObjects;
     public UnityEvent onDeath;
     public bool destroyOnDeath = true;
+    public AudioClip hurtSound;
+    public AudioClip deathSound;
 
     private Animator animator;
     private float cooldownTimer;
@@ -28,7 +30,7 @@ public class HealthEnemy : MonoBehaviour {
     }
 
     public void TakeDamage(float amount) {
-        if (this.cooldownTimer > 0)
+        if (this.cooldownTimer > 0 || this.health <= 0)
             return;
 
         this.health = Math.Max(0, this.health - amount);
@@ -42,11 +44,16 @@ public class HealthEnemy : MonoBehaviour {
 
             foreach (var obj in this.deathObjects)
                 Instantiate(obj, this.transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
+
+            if (this.deathSound)
+                AudioSource.PlayClipAtPoint(this.deathSound, this.transform.position);
         }
 
         if (this.health <= 0 || this.CompareTag("Player")) {
             MainCamera.Instance.Shake();
         }
+        if (this.hurtSound)
+            AudioSource.PlayClipAtPoint(this.hurtSound, this.transform.position);
     }
 
     public void Heal(float amount) {
